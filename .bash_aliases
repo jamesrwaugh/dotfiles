@@ -1,5 +1,6 @@
 # My Aliases to make life easier
 alias ga='git add'
+alias gaa='git add --all'
 alias gc='git checkout'
 alias gch='git checkout HEAD'
 alias gcm='git commit -m'
