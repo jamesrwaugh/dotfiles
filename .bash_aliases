@@ -2,6 +2,7 @@
 alias ga='git add'
 alias gaa='git add --all'
 alias gc='git checkout'
+alias gm='git merge'
 alias gch='git checkout HEAD'
 alias gcm='git commit -m'
 alias gd='git diff'
