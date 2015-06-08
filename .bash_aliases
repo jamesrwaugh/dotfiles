@@ -19,6 +19,8 @@ alias c='clear'
 alias cg='clear && gs'
 alias logisim='java -jar ~/Downloads/logisim-generic-2.7.1.jar'
 alias refbox='pushd ~/ssl-refbox-robocup-2014/ && ./sslrefbox && popd'
+alias sa='sudo apt-get'
+alias sai='sudo apt-get install'
 
 export MY_SIM_ADDRESS='131.247.14.106'
 export QT_SIM_CLIENT='~/grSim/bin/client'
