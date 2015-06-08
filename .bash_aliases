@@ -45,3 +45,23 @@ function saverobobullsb4c() {
 	tar -cf "robobulls2[`date +\"%m-%d-%Y(%I-%M)B4C\"`]".tar.gz robobulls2/
 	cd robobulls2
 }
+
+# Extract common file formats
+function extract() {
+	case "$@" in
+	*.7z ) 7z x "$@" ;;
+	*.tar.bz2 ) tar xvjf "$@" ;;
+	*.bz2 ) bunzip2 "$@" ;;
+	*.deb ) ar vx "$@" ;;
+	*.tar.gz ) tar xvf "$@" ;;
+	*.gz ) gunzip "$@" ;;
+	*.tar ) tar xvf "$@" ;;
+	*.tbz2 ) tar xvjf "$@" ;;
+	*.tar.xz ) tar xvf "$@" ;;
+	*.tgz ) tar xvzf "$@" ;;
+	*.rar ) unrar x "$@" ;;
+	*.zip ) unzip "$@" ;;
+	*.Z ) uncompress "$@" ;;
+	* ) echo " Unsupported file format" ;;
+	esac
+}
