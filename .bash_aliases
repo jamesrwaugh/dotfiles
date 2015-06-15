@@ -27,11 +27,7 @@ export QT_SIM_CLIENT='~/grSim/bin/client'
 
 # "Git clone branch"
 function gclb() {
-	mkdir $2
-	cd $2
-	git init
-	git remote add -t $2 -f origin $1
-	git checkout $2
+	git checkout -b $1 origin/$1
 }
 
 function saverobobulls() {
