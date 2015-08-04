@@ -39,7 +39,7 @@ function findinc() {
 
 #set /usr/local/lib as library path
 function lld() {
-	export LD_LIBRARY_PATH='/usr/local/lib'
+	export LD_LIBRARY_PATH='/usr/local/lib:.'
 }
 
 # "Git clone branch"
