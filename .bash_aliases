@@ -25,6 +25,23 @@ alias sai='sudo apt-get install'
 export MY_SIM_ADDRESS='131.247.14.106'
 export QT_SIM_CLIENT='~/grSim/bin/client'
 
+#Looks for a lib in /usr/lib and /usr/local/lib
+function findlib() {
+	find /usr/lib       \( -iname "*$1*\.a" -o -iname "*$1*\.so" \)
+	find /usr/local/lib \( -iname "*$1*\.a" -o -iname "*$1*\.so" \)
+}
+
+#Looks for headers in /usr/include and /usr/local/include
+function findinc() {
+	find /usr/include       -iname "*$1*"
+	find /usr/local/include -iname "*$1*"
+}
+
+#set /usr/local/lib as library path
+function lld() {
+	export LD_LIBRARY_PATH='/usr/local/lib'
+}
+
 # "Git clone branch"
 function gclb() {
 	git checkout -b $1 origin/$1
