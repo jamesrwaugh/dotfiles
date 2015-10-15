@@ -21,6 +21,7 @@ alias logisim='java -jar ~/Downloads/logisim-generic-2.7.1.jar'
 alias refbox='pushd ~/ssl-refbox/ && ./sslrefbox && popd'
 export MY_SIM_ADDRESS='131.247.14.106'
 export QT_SIM_CLIENT='~/grSim/bin/client'
+export PS1="\[$(tput bold)\]\[$(tput setaf 6)\]\u@\h:\W\\$ \[$(tput sgr0)\]"
 
 #Looks for a lib in /usr/lib and /usr/local/lib
 function findlib() {
