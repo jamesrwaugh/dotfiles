@@ -38,6 +38,28 @@ function du() {
     `which du` ${1-.} --human-readable | sort --human-numeric-sort
 }
 
+#Search history for something, or display tail with no arguments
+function hs() {
+    if [ -n "$1" ]; then
+        history | grep $1
+    else
+        history | tail
+    fi
+}
+
+#Execute the command at the "$1"th history line, as shown by the command.
+#The command at that line is brought back up in history
+function hse() {
+    line=$(history | egrep "^\W?$1")
+    if [ -n "$line" ]; then
+        command=$(echo $line | sed "s/[[:digit:]]* //")
+        eval $command
+        history -s $command #Record this command in history
+    else 
+        echo "No History Line $1"
+    fi
+}
+
 #set /usr/local/lib and . as library path
 function lld() {
 	export LD_LIBRARY_PATH='/usr/local/lib:.'
@@ -48,7 +70,7 @@ function gclb() {
 	git checkout -b $1 origin/$1
 }
     
-#Save a tar.gz of the working directory in ..
+#Save a dated tar.gz of the working directory in ..
 function savewd() {
     WD=`pwd | sed "s|.*/||"`
 	cd ..
