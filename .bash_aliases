@@ -1,4 +1,5 @@
 # My Aliases to make life easier
+alias sudo='sudo ' #http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias ga='git add'
 alias gaa='git add --all'
 alias gc='git checkout'
