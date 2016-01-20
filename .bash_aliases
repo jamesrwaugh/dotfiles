@@ -64,6 +64,15 @@ function hse() {
     fi
 }
 
+#Search for something in ps or just display "au"
+function pss() {
+    if [ -n "$1" ]; then
+        ps aux | grep $1
+    else
+        ps au
+    fi
+}
+
 #set /usr/local/lib and . as library path
 function lld() {
 	export LD_LIBRARY_PATH='/usr/local/lib:.'
