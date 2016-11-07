@@ -1,0 +1,6 @@
+#!/bin/bash
+#Alias for Bash Windows
+
+alias npp='/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe'
+alias corflags="C:/Program\ Files\ \(x86\)/Microsoft\ SDKs/Windows/v7.0A/Bin/CorFlags.exe"
+alias ant="~/bin/apache-ant-1.9.7/bin/ant"
