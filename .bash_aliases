@@ -28,7 +28,7 @@ export QT_SIM_CLIENT='~/grSim/bin/client'
 export PS1="\[$(tput bold)\]\[$(tput setaf 6)\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ \[$(tput sgr0)\]"
 
 function jpg95() {
-    convert $1 -quality 95% "$(echo $1 | cut -d "." -f 1).jpg"
+    convert "$1" -quality 95% "$(echo $1 | cut -d "." -f 1).jpg"
 }
 
 #Looks for a lib in /usr/lib and /usr/local/lib
