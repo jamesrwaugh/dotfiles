@@ -4,3 +4,12 @@
 alias npp='/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe'
 alias corflags="C:/Program\ Files\ \(x86\)/Microsoft\ SDKs/Windows/v7.0A/Bin/CorFlags.exe"
 alias ant="~/bin/apache-ant-1.9.7/bin/ant"
+alias ivy="java -jar ~/bin/apache-ivy-2.4.0/ivy-2.4.0.jar"
+alias e='explorer .'
+alias nunit='/c/Program\ Files\ \(x86\)/NUnit\ 2.5.9/bin/net-2.0/nunit-x86.exe &'
+alias python3='$APPDATA/../Local/Programs/Python/Python36/python.exe'
+
+function aliases() 
+{ 
+    npp ~/.bash_aliases ~/.bash_aliases_windows &
+}
