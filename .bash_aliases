@@ -15,6 +15,7 @@ alias gb='git branch'
 alias gu='git reset --soft HEAD~1'
 alias gplb='git pull origin'
 alias gpb='git push origin'
+alias gp='git pull'
 alias h='history'
 alias c='clear'
 alias l='ls -CF'
@@ -93,6 +94,22 @@ function savewd() {
 	cd ..
 	tar -cf "$WD[`date +\"%m-%d-%Y(%I-%M)\"`]".tar.gz $WD
 	cd $WD
+}
+
+function gcurrentbranch() {
+    echo `git branch | grep \* | cut -d ' ' -f2`
+}
+
+function gpcb() {
+    git push origin `gcurrentbranch`
+}
+
+function gpcbf() {
+    git push -f origin `gcurrentbranch`
+}
+
+function gbsetupstream {
+    git branch --set-upstream-to=origin/`gcurrentbranch` `gcurrentbranch`
 }
 
 # Extract common file formats
