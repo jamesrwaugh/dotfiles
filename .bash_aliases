@@ -1,3 +1,4 @@
+#!/bin/bash
 # My Aliases to make life easier
 alias sudo='sudo ' #http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
 alias ga='git add'
@@ -16,16 +17,14 @@ alias gu='git reset --soft HEAD~1'
 alias gplb='git pull origin'
 alias gpb='git push origin'
 alias gp='git pull'
+alias gchd='git checkout develop'
+alias gchm='git checkout master'
 alias h='history'
 alias c='clear'
 alias l='ls -CF'
 alias ll='ls -la --human-readable'
 alias df='df --human-readable'
 alias cg='clear && gs'
-alias logisim='java -jar ~/Downloads/logisim-generic-2.7.1.jar'
-alias refbox='pushd ~/ssl-refbox/ && ./sslrefbox && popd'
-export MY_SIM_ADDRESS='131.247.14.106'
-export QT_SIM_CLIENT='~/grSim/bin/client'
 export PS1="\[$(tput bold)\]\[$(tput setaf 6)\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ \[$(tput sgr0)\]"
 
 function jpg95() {
