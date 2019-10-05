@@ -25,7 +25,6 @@ alias l='ls -CF'
 alias ll='ls -la --human-readable'
 alias df='df --human-readable'
 alias cg='clear && gs'
-export PS1="\[$(tput bold)\]\[$(tput setaf 6)\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ \[$(tput sgr0)\]"
 
 function jpg95() {
     convert "$1" -quality 95% "$(echo $1 | cut -d "." -f 1).jpg"
