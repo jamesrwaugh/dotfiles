@@ -19,7 +19,6 @@ if __name__ == '__main__':
 			archives.append(object["domain"])
 
 	#Open all as tabs in Firefox, with /board/ on the end.
-	#This just puts them all on one private window
 	for archive in archives:
 		os.system("firefox --private-window {0}/{1}/ &".format(archive, board))
 
