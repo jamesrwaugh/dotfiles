@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Opens all archives of a specified board in Firefox
 import requests
 import json, sys, os
@@ -6,7 +6,7 @@ import json, sys, os
 if __name__ == '__main__':
 	#Boilerplate
 	if len(sys.argv) < 2:
-		print "{}: [board name]".format(sys.argv[0])
+		print("{}: [board name]".format(sys.argv[0]))
 		sys.exit(1)
 	board = sys.argv[1]
 	archives = [ ]
