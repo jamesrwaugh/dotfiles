@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
 	#Get Mayhem's JSON of archives.
 	#For each, check if it holds a board.
-	r = requests.get("https://raw.githubusercontent.com/MayhemYDG/archives.json/gh-pages/archives.json")
+	r = requests.get("https://4chenz.github.io/archives.json/archives.json")
 	for object in r.json():
 		if board in object["boards"]:
 			archives.append(object["domain"])
