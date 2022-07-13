@@ -25,6 +25,12 @@ alias l='ls -CF'
 alias ll='ls -la --human-readable'
 alias df='df --human-readable'
 alias cg='clear && gs'
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+export DENO_INSTALL="/home/james/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
 
 function jpg95() {
     convert "$1" -quality 95% "$(echo $1 | cut -d "." -f 1).jpg"
