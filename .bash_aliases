@@ -60,19 +60,6 @@ function hs() {
     fi
 }
 
-#Execute the command at the "$1"th history line, as shown by the command.
-#The command at that line is brought back up in history
-function hse() {
-    line=$(history | egrep "^\W?$1")
-    if [ -n "$line" ]; then
-        command=$(echo $line | sed "s/[[:digit:]]* //")
-        eval $command
-        history -s $command #Record this command in history
-    else 
-        echo "No History Line $1"
-    fi
-}
-
 #Search for something in ps or just display "au"
 function pss() {
     if [ -n "$1" ]; then
@@ -134,4 +121,8 @@ function extract() {
 	*.Z ) uncompress "$@" ;;
 	* ) echo " Unsupported file format" ;;
 	esac
+}
+
+function mc() {
+	meson compile $@ -C builddir/
 }
